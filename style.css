@@ -6,6 +6,10 @@ body {
 }
 :root {
   --color: rgb(241, 168, 31);
+  --bear1: rgb(254, 225, 214);
+  --bear2: rgb(223, 250, 223);
+  --bear3: rgb(252, 248, 219);
+  --bear4: rgb(225, 238, 252);
   --font: "Dancing Script", cursive;
   font-optical-sizing: auto;
   font-weight: 600;
@@ -127,7 +131,6 @@ ul a:hover {
 #dropdown:hover i {
   transform: rotate(180deg);
 }
-
 #join {
   margin-left: 20%;
   margin-top: 1.5%;
@@ -154,8 +157,8 @@ ul a:hover {
 #sky img {
   width: 7%;
   height: 2vh;
-  margin-top: 89px;
-  margin-left: 5px;
+  margin-top: 15vh;
+  margin-left: 0.3%;
 }
 /* page 1 details */
 #page1-titel {
@@ -290,3 +293,345 @@ ul a:hover {
     font-size: 2.5vw;
   }
 }
+/* page 2 */
+#main-div-page2 {
+  width: 100%;
+  height: 100vh;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+#main-div-page2 p {
+  width: 80%;
+  padding-left: 20%;
+  font-weight: normal;
+  margin-top: -2%;
+}
+#main-div-page2 h2 {
+  font-family: var(--font);
+  font-size: 4vw;
+  font-weight: bolder;
+  margin-top: -1%;
+}
+#bears-div {
+  width: 100%;
+  display: flex;
+}
+#school-bus,
+#playground,
+#health,
+#learning {
+  width: 25%;
+  height: 61vh;
+  background-color: transparent;
+  justify-items: center;
+  overflow: visible;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 3%;
+}
+#bear-head1,
+#playground-head,
+#health-head,
+#learning-head {
+  width: 35%;
+  height: 20vh;
+  border-radius: 100%;
+  margin-top: 5vh;
+  position: relative;
+  overflow: visible;
+  margin-top: 0%;
+  transition: background-color 0.5s ease;
+}
+#bear-head1 {
+  background-color: var(--bear1);
+}
+#playground-head {
+  background-color: var(--bear2);
+}
+#health-head {
+  background-color: var(--bear3);
+}
+#learning-head {
+  background-color: var(--bear4);
+}
+#bear-head1 i,
+#playground-head i,
+#health-head i,
+#learning-head i {
+  margin-top: 30%;
+  font-size: 3vw;
+  transition: color 0.8s ease;
+}
+#bear-head1 i {
+  color: orangered;
+}
+
+#playground-head i {
+  color: rgb(0, 96, 0);
+}
+#health-head i {
+  color: rgb(255, 183, 0);
+}
+#learning-head i {
+  color: rgb(0, 132, 255);
+}
+#bear-head1::before,
+#bear-head1::after,
+#playground-head::before,
+#playground-head::after,
+#health-head::before,
+#health-head::after,
+#learning-head::before,
+#learning-head::after {
+  content: "";
+  width: 15%;
+  height: 8vh;
+  position: absolute;
+  position: absolute;
+  z-index: 2;
+  border-radius: 50%;
+  transition: background-color 0.5s ease;
+}
+#bear-head1::before,
+#bear-head1::after {
+  background-color: var(--bear1);
+}
+#playground-head::before,
+#playground-head::after {
+  background-color: var(--bear2);
+}
+#health-head::before,
+#health-head::after {
+  background-color: var(--bear3);
+}
+#learning-head::before,
+#learning-head::after {
+  background-color: var(--bear4);
+}
+#bear-head1::before,
+#playground-head::before,
+#health-head::before,
+#learning-head::before {
+  left: 2%;
+  transform: rotate(-10deg);
+}
+#bear-head1::after,
+#playground-head::after,
+#health-head::after,
+#learning-head::after {
+  right: 2%;
+  transform: rotate(10deg);
+}
+#bear-body1,
+#playground-body,
+#health-body,
+#learning-body {
+  width: 90%;
+  height: 46vh;
+  border-radius: 100%;
+  margin-top: -12%;
+  align-items: center;
+  text-align: center;
+  transition: background-color 0.5s ease;
+}
+#bear-body1 {
+  background-color: var(--bear1);
+}
+#playground-body {
+  background-color: var(--bear2);
+}
+#health-body {
+  background-color: var(--bear3);
+}
+#learning-body {
+  background-color: var(--bear4);
+}
+#bear-body1 h3,
+#playground-body h3,
+#health-body h3,
+#learning-body h3 {
+  padding-top: 25%;
+  font-family: var(--font);
+  font-size: 2.5vw;
+  transition: color 1s ease;
+}
+#bear-body1 h3 {
+  color: orangered;
+}
+#playground-body h3 {
+  color: green;
+}
+#health-body h3 {
+  color: rgb(255, 183, 0);
+}
+#learning-body h3 {
+  color: rgb(0, 132, 255);
+}
+#bear-body1 p,
+#playground-body p,
+#health-body p,
+#learning-body p {
+  width: 100%;
+  margin-left: -10%;
+  transition: color 0.8s ease;
+}
+#school-bus:hover #bear-head1,
+#school-bus:hover #bear-body1,
+#school-bus:hover #bear-head1::before,
+#school-bus:hover #bear-head1::after {
+  background-color: orangered;
+}
+/* bear1 */
+#school-bus:hover #bear-body1 > h3,
+#school-bus:hover #bear-body1 > p,
+#school-bus:hover #bear-head1 i,
+/*  bear2*/
+#playground:hover #playground-body > h3,
+#playground:hover #playground-body > p,
+#playground:hover #playground-head i,
+/* bear3 */
+#health:hover #health-body > h3,
+#health:hover #health-body > p,
+#health:hover #health-head i ,
+/* brae4 */
+#learning:hover #learning-body > h3,
+#learning:hover #learning-body > p,
+#learning:hover #learning-head i {
+  color: white;
+}
+#playground:hover #playground-head,
+#playground:hover #playground-body,
+#playground:hover #playground-head::before,
+#playground:hover #playground-head::after {
+  background-color: green;
+}
+#health:hover #health-head,
+#health:hover #health-body,
+#health:hover #health-head::before,
+#health:hover #health-head::after {
+  background-color: rgb(255, 183, 0);
+}
+#learning:hover #learning-head,
+#learning:hover #learning-body,
+#learning:hover #learning-head::before,
+#learning:hover #learning-head::after {
+  background-color: rgb(0, 132, 255);
+}
+/* page2 animation */
+#school-bus {
+  animation: anima 1s ease backwards;
+}
+
+@keyframes anima {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+#playground {
+  animation: anima2 1.2s ease backwards;
+}
+@keyframes anima2 {
+  from {
+    transform: translateY(120px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+#health {
+  animation: anima3 1.4s ease backwards;
+}
+@keyframes anima3 {
+  from {
+    transform: translateY(140px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+#learning {
+  animation: anima4 1.6s ease backwards;
+}
+@keyframes anima4 {
+  from {
+    transform: translateY(160px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+/* page 2 responsive */
+@media screen and (max-width: 576px) {
+  #main-div-page2 {
+    width: 100%;
+    height: auto;
+    padding: 5%;
+  }
+  #main-div-page2 p {
+    width: 100%;
+    padding-left: 0%;
+    margin-top: 0%;
+    font-size: 3vw;
+  }
+  #main-div-page2 h2 {
+    font-size: 6vw;
+    margin-top: 0%;
+  }
+  #bears-div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #school-bus,
+  #playground,
+  #health,
+  #learning {
+    width: 100%;
+    height: 53vh;
+    margin-top: 3%;
+  }
+  #bear-head1,
+  #playground-head,
+  #health-head,
+  #learning-head {
+    width: 28%;
+    height: 15vh;
+    margin-top: 2vh;
+  }
+  #bear-head1 i,
+  #playground-head i,
+  #health-head i,
+  #learning-head i {
+    margin-top: 40%;
+    font-size: 8vw;
+  }
+  #bear-body1,
+  #playground-body,
+  #health-body,
+  #learning-body {
+    width: 70%;
+    height: 36vh;
+    margin-top: -4%;
+    padding: 3%;
+  }
+  #bear-body1 h3,
+  #playground-body h3,
+  #health-body h3,
+  #learning-body h3 {
+    padding-top: 27%;
+    font-size: 5vw;
+  }
+  #bear-body1 p,
+  #playground-body p,
+  #health-body p,
+  #learning-body p {
+    width: 100%;
+    margin-left: 0%;
+  }
+}
+/* page3 */
