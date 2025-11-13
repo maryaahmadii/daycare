@@ -56,6 +56,7 @@ header {
   height: 15%;
   font-size: 1.5vw;
   position: fixed;
+  z-index: 2;
 }
 header h1 {
   color: var(--color);
@@ -153,6 +154,7 @@ ul a:hover {
   display: inline-block;
   position: fixed;
   pointer-events: none;
+  z-index: 2;
 }
 #sky img {
   width: 7%;
@@ -527,42 +529,50 @@ ul a:hover {
 @keyframes anima {
   from {
     transform: translateY(100px);
+    opacity: 0;
   }
   to {
     transform: translateY(0px);
+    opacity: 1;
   }
 }
 #playground {
-  animation: anima2 1.2s ease backwards;
+  animation: anima2 1.4s ease backwards;
 }
 @keyframes anima2 {
   from {
     transform: translateY(120px);
+    opacity: 0;
   }
   to {
     transform: translateY(0px);
+    opacity: 1;
   }
 }
 #health {
-  animation: anima3 1.4s ease backwards;
+  animation: anima3 1.8s ease backwards;
 }
 @keyframes anima3 {
   from {
     transform: translateY(140px);
+    opacity: 0;
   }
   to {
     transform: translateY(0px);
+    opacity: 1;
   }
 }
 #learning {
-  animation: anima4 1.6s ease backwards;
+  animation: anima4 2.1s ease backwards;
 }
 @keyframes anima4 {
   from {
     transform: translateY(160px);
+    opacity: 0;
   }
   to {
     transform: translateY(0px);
+    opacity: 1;
   }
 }
 /* page 2 responsive */
@@ -635,3 +645,650 @@ ul a:hover {
   }
 }
 /* page3 */
+#main-div-page3 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#info-page3 {
+  width: 40%;
+  height: 80vh;
+  color: black;
+  margin-top: 0%;
+  padding: 1.5%;
+}
+#info-page3 h2 {
+  font-family: var(--font);
+  font-size: 2.8vw;
+}
+#info-page3 p {
+  font-weight: normal;
+}
+#info-page3 button {
+  width: 34%;
+  height: 8vh;
+  background-color: var(--color);
+  padding: 3%;
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 9999px;
+  float: left;
+}
+#info-page3 div {
+  width: 40%;
+  height: 10vh;
+  float: left;
+  margin-left: 25%;
+}
+#info-page3 div > img {
+  width: 33%;
+  height: 10vh;
+  border-radius: 100%;
+  float: left;
+}
+#info-page3 div > p {
+  float: left;
+  color: var(--color);
+  margin-left: 6%;
+  font-size: 1.5vw;
+  margin-top: 5%;
+}
+#p2-page3 {
+  margin-top: -15% !important;
+  color: black !important;
+  font-size: 1.2vw !important;
+  margin-left: 40% !important;
+}
+#img-div-page3 {
+  width: 50%;
+  height: 80vh;
+  animation: fade 1.4s ease backwards;
+}
+#img1-page3 {
+  width: 70%;
+  height: 70vh;
+  border: 15px solid white;
+  margin-left: 15%;
+  border-radius: 100%;
+  float: left;
+  transition: border 1s ease;
+}
+#img2-page3,
+#img3-page3 {
+  width: 30%;
+  height: 33vh;
+  border-radius: 100%;
+  margin-top: 50%;
+  border: 15px solid white;
+  transition: border 1s ease;
+}
+#img2-page3 {
+  margin-left: -27%;
+  float: left;
+}
+#img3-page3 {
+  margin-left: -73%;
+  float: left;
+}
+#img1-page3:hover,
+#img2-page3:hover,
+#img3-page3:hover {
+  border: 15px solid var(--color);
+}
+/* animation page3 */
+@keyframes fade {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* page3 responsive */
+@media screen and (max-width: 576px) {
+  #main-div-page3 {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    overflow-x: hidden;
+  }
+  #info-page3 {
+    width: 100%;
+    height: 60vh;
+    padding: 5%;
+  }
+  #info-page3 h2 {
+    font-size: 7vw;
+  }
+  #info-page3 p {
+    font-size: 4vw;
+  }
+  #info-page3 button {
+    width: 30%;
+    height: 6vh;
+    padding: 2%;
+    font-size: 3vw;
+  }
+  #info-page3 div {
+    width: 40%;
+    height: 6vh;
+    margin-left: 30%;
+  }
+  #info-page3 div > img {
+    width: 30%;
+    height: 6vh;
+  }
+  #info-page3 div > p {
+    margin-left: 6%;
+    font-size: 3.5vw;
+    margin-top: 5%;
+  }
+  #p2-page3 {
+    margin-top: -9% !important;
+    font-size: 3.2vw !important;
+    margin-left: 5% !important;
+  }
+  #img-div-page3 {
+    width: 100%;
+    height: 50vh;
+  }
+  #img1-page3 {
+    width: 95%;
+    height: 40vh;
+    border: 8px solid white;
+    margin-left: 2.5%;
+  }
+  #img2-page3,
+  #img3-page3 {
+    width: 40%;
+    height: 15vh;
+    border-radius: 100%;
+    margin-top: 65%;
+    border: 8px solid white;
+    transition: border 1s ease;
+  }
+  #img2-page3 {
+    margin-left: -45%;
+  }
+  #img3-page3 {
+    margin-left: -90%;
+  }
+  #img1-page3:hover,
+  #img2-page3:hover,
+  #img3-page3:hover {
+    border: 8px solid var(--color);
+  }
+}
+/* page4 */
+#main-div-page4 {
+  width: 100%;
+  height: 90vh;
+  justify-items: center;
+  align-content: center;
+}
+#details-div-page4 {
+  width: 90%;
+  height: 70vh;
+  background-color: var(--bear3);
+  border-radius: 1%;
+  display: flex;
+  justify-items: center;
+  align-content: center;
+  animation: page4 1.8s ease backwards;
+}
+#details-div-page4 img {
+  width: 50%;
+  height: 70vh;
+  border-radius: 2%;
+  filter: brightness(0.5);
+}
+#details-div-page4 div {
+  width: 50%;
+  height: 80vh;
+  padding: 5%;
+}
+#details-div-page4 div > h2 {
+  color: black;
+  font-family: var(--font);
+  font-size: 5vw;
+}
+#details-div-page4 div > p {
+  font-weight: normal;
+  margin-top: -7%;
+}
+#details-div-page4 div > button {
+  width: 95%;
+  height: 8vh;
+  background-color: var(--color);
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+@keyframes page4 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* page 4 responsive */
+@media screen and (max-width: 576px) {
+  #main-div-page4 {
+    width: 100%;
+    height: auto;
+  }
+  #details-div-page4 {
+    width: 90%;
+    height: 95vh;
+    display: block;
+    padding: 5%;
+    margin-top: 10%;
+  }
+  #details-div-page4 img {
+    width: 100%;
+    height: 50vh;
+  }
+  #details-div-page4 div {
+    width: 100%;
+    height: 50vh;
+  }
+  #details-div-page4 div > h2 {
+    font-size: 8vw;
+  }
+  #details-div-page4 div > p {
+    margin-top: -6%;
+    font-size: 4vw;
+  }
+  #details-div-page4 div > button {
+    width: 100%;
+    height: 6vh;
+    font-size: 3.5vw;
+  }
+}
+/* page 5 */
+#main-div-page5,
+#main2-div-page5 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  flex-wrap: wrap;
+}
+#color-pens,
+#color-managments,
+#althletic-dance,
+#learning-speaking,
+#religion-history,
+#general-know {
+  width: 30%;
+  height: 80vh;
+  background-color: transparent;
+  justify-items: center;
+  align-content: center;
+  transition: transform 0.7s ease-in;
+}
+#pens,
+#managments,
+#dance,
+#learning-img,
+#religion,
+#general {
+  width: 80%;
+  height: 50vh;
+  border-radius: 100%;
+  border: 8px solid var(--bear3);
+  margin-left: 10%;
+}
+#color-pens2,
+#color-managments2,
+#althletic-dance2,
+#learning-speaking2,
+#religion-history2,
+#general-know2 {
+  width: 100%;
+  background-color: var(--bear3);
+  justify-items: center;
+  align-content: center;
+  margin-top: -2%;
+  margin-top: -20%;
+  border-radius: 20px;
+}
+#color-pens2 h2,
+#color-managments2 h2,
+#althletic-dance2 h2,
+#learning-speaking2 h2,
+#religion-history2 h2,
+#general-know2 h2 {
+  font-family: var(--font);
+  font-size: 3vw;
+  font-weight: bolder;
+  margin-top: 20%;
+}
+#page5-teacher,
+#page5-teacher2,
+#page5-teacher3,
+#page5-teacher4,
+#page5-teacher5,
+#page5-teacher6 {
+  width: 100%;
+  height: 10vh;
+  margin-top: -3%;
+}
+#page5-teacher img,
+#page5-teacher2 img,
+#page5-teacher3 img,
+#page5-teacher4 img,
+#page5-teacher5 img,
+#page5-teacher6 img {
+  width: 17%;
+  height: 10vh;
+  border-radius: 100%;
+  float: left;
+  margin-left: 0%;
+  border: none !important;
+}
+#page5-teacher p,
+#page5-teacher2 p,
+#page5-teacher3 p,
+#page5-teacher4 p,
+#page5-teacher5 p,
+#page5-teacher6 p {
+  float: left;
+  margin-left: 2%;
+  margin-top: 3%;
+  color: var(--color);
+}
+#p-page5,
+#p-managments,
+#p-dance,
+#p-learning,
+#p-religion,
+#p-general {
+  float: left;
+  margin-left: -17% !important;
+  margin-top: 7% !important;
+  font-weight: normal;
+}
+#price-page5,
+#price2-managments,
+#price-dance,
+#price-learning,
+#price-religion,
+#price-general {
+  width: 15%;
+  height: 6vh;
+  background-color: var(--color);
+  border-radius: 20px;
+  color: white !important;
+  text-align: center;
+  padding-top: 2.5%;
+  margin-left: 45% !important;
+}
+#age-color,
+#age-managments,
+#age-dance,
+#age-learning,
+#age-religion,
+#age-general {
+  width: 32%;
+  border-top: orangered 2px solid;
+  float: left;
+  padding: 1%;
+  margin-left: 2px;
+}
+#age-color h4,
+#age-managments h4,
+#age-dance h4,
+#age-learning h4,
+#age-religion h4,
+#age-general h4 {
+  margin-top: 0%;
+  color: orangered;
+}
+#age-color p,
+#age-managments p,
+#age-dance p,
+#age-learning p,
+#age-religion p,
+#age-general p {
+  margin-top: -15% !important;
+  font-weight: normal;
+  color: gray;
+}
+#time-color,
+#time-managments,
+#time-dance,
+#time-learning,
+#time-religion,
+#time-general {
+  width: 32%;
+  border-top: green 2px solid;
+  float: left;
+  padding: 1%;
+  margin-left: 2px;
+}
+#time-color h4,
+#time-managments h4,
+#time-dance h4,
+#time-learning h4,
+#time-religion h4,
+#time-general h4 {
+  margin-top: 0%;
+  color: green;
+}
+#time-color p,
+#time-managments p,
+#time-dance p,
+#time-learning p,
+#time-religion p,
+#time-general p {
+  margin-top: -15% !important;
+  font-weight: normal;
+  color: gray;
+}
+#capacity-color,
+#capacity-managments,
+#capacity-dance,
+#capacity-learning,
+#capacity-religion,
+#capacity-general {
+  width: 32%;
+  border-top: goldenrod 2px solid;
+  float: left;
+  padding: 1%;
+  margin-left: 2px;
+}
+#capacity-color h4,
+#capacity-managments h4,
+#capacity-dance h4,
+#capacity-learning h4,
+#capacity-religion h4,
+#capacity-general h4 {
+  margin-top: 0%;
+  color: goldenrod;
+}
+#capacity-color p,
+#capacity-managments p,
+#capacity-dance p,
+#capacity-learning p,
+#capacity-religion p,
+#capacity-general p {
+  margin-top: -15% !important;
+  font-weight: normal;
+  color: gray;
+}
+/* animation page5 */
+#color-pens {
+  animation: pens 2s ease backwards;
+}
+@keyframes pens {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+#color-managments {
+  animation: managments 2.5s ease backwards;
+}
+@keyframes managments {
+  from {
+    transform: translateY(250px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+#althletic-dance {
+  animation: dance 3s ease backwards;
+}
+@keyframes dance {
+  from {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+#learning-speaking {
+  animation: speaking 2s ease backwards;
+}
+@keyframes speaking {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+#religion-history {
+  animation: history 2.5s ease backwards;
+}
+@keyframes history {
+  from {
+    transform: translateY(250px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+#general-know {
+  animation: know 3s ease backwards;
+}
+@keyframes know {
+  from {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+#color-pens:hover,
+#color-managments:hover,
+#althletic-dance:hover,
+#learning-speaking:hover,
+#religion-history:hover,
+#general-know:hover {
+  transform: translateY(-20px);
+}
+/* page5 responsive */
+@media screen and (max-width: 576px) {
+  #main-div-page5,
+  #main2-div-page5 {
+    width: 100%;
+    height: 100vh;
+    display: block;
+  }
+  #color-pens,
+  #color-managments,
+  #althletic-dance,
+  #learning-speaking,
+  #religion-history,
+  #general-know {
+    width: 98%;
+    height: 62vh;
+    padding: 5%;
+  }
+  #pens,
+  #managments,
+  #dance,
+  #learning-img,
+  #religion,
+  #general {
+    width: 60%;
+    height: 30vh;
+    margin-left: 20%;
+    margin-top: 0%;
+  }
+  #color-pens2,
+  #color-managments2,
+  #althletic-dance2,
+  #learning-speaking2,
+  #religion-history2,
+  #general-know2 {
+    width: 95%;
+  }
+  #color-pens2 h2,
+  #color-managments2 h2,
+  #althletic-dance2 h2,
+  #learning-speaking2 h2,
+  #religion-history2 h2,
+  #general-know2 h2 {
+    font-size: 7vw;
+  }
+  #page5-teacher,
+  #page5-teacher2,
+  #page5-teacher3,
+  #page5-teacher4,
+  #page5-teacher5,
+  #page5-teacher6 {
+    padding: 3%;
+  }
+  #page5-teacher img,
+  #page5-teacher2 img,
+  #page5-teacher3 img,
+  #page5-teacher4 img,
+  #page5-teacher5 img,
+  #page5-teacher6 img {
+    width: 15%;
+    height: 7vh;
+  }
+  #price-page5,
+  #price2-managments,
+  #price-dance,
+  #price-learning,
+  #price-religion,
+  #price-general {
+    width: 20%;
+    height: 3vh;
+    padding-top: 1%;
+    margin-left: 55% !important;
+    margin-top: -8% !important;
+  }
+}
+/* pahe6 */
