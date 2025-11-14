@@ -351,10 +351,11 @@
             <input type="email" placeholder="Gurdian Email" required />
             <input type="text" placeholder="Child Name" required />
             <input
-              type="text"
+              type="number"
               placeholder="Child Age"
               required
-              pattern="^[1-5\S]+$"
+              min="1"
+              max="6"
             />
             <textarea name="" id="input-area" placeholder="Message"></textarea>
             <input type="submit" id="submit" />
