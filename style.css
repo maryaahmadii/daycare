@@ -749,7 +749,6 @@ ul a:hover {
     opacity: 1;
   }
 }
-
 /* page3 responsive */
 @media screen and (max-width: 576px) {
   #main-div-page3 {
@@ -1217,7 +1216,6 @@ ul a:hover {
   transform: translateY(-20px);
 }
 /* page5 responsive */
-
 @media screen and (max-width: 576px) {
   #main-div-page5,
   #main2-div-page5 {
